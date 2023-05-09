@@ -1,0 +1,49 @@
+os environ variable setting before deployment
+
+cron scheduling [almost done - Github Actions]
+
+Api Documentation
+
+UI Designing
+
+Create super user on deployment
+
+
+------
+------
+------
+
+the initdb must be run only after that deployment can be made... need to change that
+[Like for now I need to run initdb locally + Postgres,  only after that the deployment can be done need to change that. ]
+
+change TEMP scrape result
+
+BASE_DIR
+
+Django prod secret replace
+
+Debug false
+
+handle collect static
+
+Try and run gunicorn on the local machine first
+
+you can locally create super user
+
+optimize the action-requirements.txt 
+
+access token and refresh token time change it
+
+cors handle
+
+refactor the reinit_scrape_results command to access the job names from the Jobs Model.
+
+djano-admin version
+v4.2 may cause admin panel issues
+v4.12 is stable ig 
+so move to it
+
+
+ENSURE THAT THE CSV OF JOB NAMES is SAME as the list passed to the Management Command
+
+

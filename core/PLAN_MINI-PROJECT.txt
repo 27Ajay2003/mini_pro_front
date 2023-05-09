@@ -1,0 +1,77 @@
+/refresh - permission_classes not done
+
+/api/technical/instructions
+
+COSINE handling
+------------------------------------
+------------------------------------
+------------------------------------
+Frontend Work:
+
+Data Validation
+Profile-Picture Handling
+
+#TODO
+The reason why you are not getting any result for http://127.0.0.1:8000/api/jobs/languages/?q=c+ is 
+because the plus sign (+) is a reserved character in URLs and is used to represent a space. 
+When you send c+ as a query parameter, Django sees it as c (with a space) instead of c+.
+
+To fix this, you can encode the + sign in your URL as %2B, 
+like this: http://127.0.0.1:8000/api/jobs/languages/?q=c%2B. This will make sure that Django
+receives c+ as the query parameter and you should get the expected results.
+------------------------------------
+------------------------------------
+------------------------------------
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+change to MEDIA_ROOT
+
+DEBUG = FALSE
+
+TIMEZONE
+
+LOGGER
+
+? createsuperuser admin to management/commands [only for convenience]
+
+check all csvs
+
+similar-questions check
+question provide endpoint check ???
+
+API Documentation
+
+add more data to the csv's and change it -> languages, frameworks, ....
+
+
+frontend visualization result is not fixed yet
+define the visualizations
+draw the basic structure
+
+give varun's code
+------------------------------------
+------------------------------------
+------------------------------------
+00 00,12 * * *
+
+regex rectify and add
+
+jobs csv -> add relevant jobs and refactor [scrapejobslist.csv]
+
+languages + frameworks, .... skills db frame atleast len(of all) == 1 check
+
+check all csvs
+
+Single Code Block - Scraping Code
+
+
+CRON
+
+intializing db after scrape
+
+djano-admin version
+v4.2 may cause admin panel issues
+v4.12 is stable ig 
+so move to it
