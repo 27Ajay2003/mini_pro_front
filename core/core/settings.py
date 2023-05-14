@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-3p-%p=w2+^5(eyo&ux3=^j-&clu6)kv@_@*#8^l*dq@3e+26mp
 DEBUG = True
 
 ALLOWED_HOSTS = []
+CORS_ORIGIN_ALLOW_ALL = True
 
 
 # Application definition
@@ -44,9 +45,13 @@ INSTALLED_APPS = [
     'technicalquestions_api.apps.TechnicalquestionsApiConfig',
     'jobscrape_api.apps.JobscrapeApiConfig',
 ]
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',  # Add your frontend URL
-]
+# CORS_ORIGIN_ALLOW_ALL = False
+
+# CORS_ORIGIN_WHITELIST = [    'http://localhost:3000',]
+# CORS_ALLOW_METHODS = [    'DELETE',    'GET',    'OPTIONS',    'PATCH',    'POST',    'PUT',]
+
+CORS_ORIGIN_ALLOW_ALL = True
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -143,9 +148,10 @@ REST_FRAMEWORK = {
 }
 
 SIMPLE_JWT = {
-    
-    'ACCESS_TOKEN_LIFETIME': timedelta(days=365),
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=365),
+    # 'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
+    # 'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
     'USER_ID_FIELD': 'username',
 }
 

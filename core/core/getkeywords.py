@@ -6,8 +6,8 @@ from nltk.tokenize import RegexpTokenizer
 from collections import defaultdict
 import numpy as np
 
-nltk.download('stopwords')
-nltk.download('punkt')
+# nltk.download('stopwords')
+# nltk.download('punkt')
 
 def get_top_keywords(document, num_keywords=5):
     # Tokenize the document into sentences and words
